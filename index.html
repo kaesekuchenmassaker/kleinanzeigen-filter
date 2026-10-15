@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Kleinanzeigen Ausschlussfilter</title>
+<style>
+  body{font:16px/1.6 system-ui,sans-serif;max-width:640px;margin:3rem auto;padding:0 1rem}
+  a.btn{display:inline-block;padding:.7rem 1.2rem;background:#86b817;color:#fff;border-radius:8px;text-decoration:none;font-weight:600}
+  code{background:rgba(128,128,128,.2);padding:.1rem .3rem;border-radius:4px}
+</style>
+</head>
+<body>
+<h1>Kleinanzeigen Ausschlussfilter</h1>
+<p>Blendet in der Suchergebnisliste von kleinanzeigen.de alle Anzeigen aus, die von dir festgelegte Begriffe enthalten. Alles läuft lokal in deinem Browser, es werden keine Daten gesendet.</p>
+
+<h2>Installation</h2>
+<ol>
+  <li>Userscript-Manager installieren: <a href="https://www.tampermonkey.net/">Tampermonkey</a> oder <a href="https://violentmonkey.github.io/">Violentmonkey</a>.</li>
+  <li>Auf den Button klicken und die Installation bestätigen:<br><br>
+    <a id="install" class="btn" href="#">Filter installieren</a></li>
+  <li>Eine Suche auf kleinanzeigen.de öffnen – unten rechts erscheint das Feld „Ausschlussfilter“.</li>
+</ol>
+
+<h2>Bedienung</h2>
+<ul>
+  <li>Begriff eingeben + Enter (mehrere mit Komma trennen).</li>
+  <li><code>*</code> als Platzhalter, z. B. <code>ersatz*teil</code>.</li>
+  <li>Regex mit Schrägstrichen, z. B. <code>/\bdefekt\b/</code>.</li>
+</ul>
+
+<script>
+  // Repo-Pfad automatisch aus der GitHub-Pages-URL ableiten (user.github.io/repo/)
+  var user = location.hostname.split('.')[0];
+  var repo = location.pathname.split('/').filter(Boolean)[0] || 'kleinanzeigen-filter';
+  document.getElementById('install').href =
+    'https://raw.githubusercontent.com/' + user + '/' + repo + '/main/kleinanzeigen-filter.user.js';
+</script>
+</body>
+</html>
