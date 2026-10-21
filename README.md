@@ -1,7 +1,3 @@
-# kleinanzeigen-filter
-Schließt Anzeigen, die bestimmte Begriffe beinhalten aus der Liste der angezeigten Suchergebnisse aus
-
-
 # Kleinanzeigen Ausschlussfilter
 
 Userscript, das in der Suchergebnisliste von kleinanzeigen.de Anzeigen ausblendet, die bestimmte Begriffe enthalten (Titel und optional Beschreibung).
@@ -24,7 +20,12 @@ Updates: Datei ändern, `@version` erhöhen und committen. Tampermonkey aktualis
 
 ## Nutzung
 
-Nach der Installation erscheint auf Suchergebnisseiten unten rechts das Feld „Ausschlussfilter“. Begriff eingeben, Enter drücken, fertig. Mehrere Begriffe mit Komma trennen.
+Nach der Installation erscheint auf Suchergebnisseiten unten rechts das Feld „Ausschlussfilter“.
+
+- **Mehrere Ausschlusslisten:** Über das Dropdown wählst du die aktive Liste. `+` legt eine neue Liste an (z. B. „Fahrrad“, „Handy“), `✎` benennt um, `🗑` löscht.
+- **Automatische Listenwahl:** Mit „Mit aktueller Suche verknüpfen“ ordnest du die Liste der aktuellen Suche/Kategorie zu (z. B. `fahrrad`). Beim nächsten Besuch einer solchen Suche wird die Liste automatisch aktiviert.
+- **Begriffe:** Eingabe + Enter, mehrere mit Komma trennen. `*` als Platzhalter, `/regex/` für reguläre Ausdrücke.
+- **Sortierung:** Suchen ohne Sortierung werden automatisch nach niedrigstem Preis sortiert. Wählst du selbst eine andere Sortierung, bleibt sie erhalten. Abschaltbar per Haken im Feld.
 
 ## Hinweise
 
